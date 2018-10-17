@@ -1,6 +1,11 @@
 # Form API for websites
 
-two fields must be sent POST to '/forms-api/api/api.php':
+## How to use
+Download this repo unzip and rename to 'forms-api' \
+Upload this folder to your hosting(probably to public_html). \
+Follow to steps below.
+
+Two fields must be sent POST to '/forms-api/api/api.php':
 1. form_name_id -> "example_contact_form_name"
 2. event_name -> "Example contact form - homepage"
 
@@ -32,5 +37,15 @@ jQuery('.wpcf7').on('wpcf7mailsent', function(event) {
 	jQuery.post(host + '/forms-api/api/api.php', inputs, function(data) {});
 });
 </pre>
+
+## CORS support and validation
+
+The CORS support disabled by default. \
+If you need CORS just open '/forms-api/api/api.php' and uncoment three headers. \
+
+Validation is disabled too. \
+If you need server side validation you probably should handle errors by yourself, example is comented in '/forms-api/api/api.php' file.
+
+## END
 
 

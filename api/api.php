@@ -6,7 +6,7 @@
 ?>
 
 <?php
-//headers
+// CORS uncoment below if you need 'cors support'
 // header('Access-Control-Allow-Origin: *');
 // header('Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, PATCH, DELETE');
 // header('Access-Control-Allow-Headers: X-Requested-With, content-type, Authorization, Content-Type');
@@ -64,9 +64,12 @@ fwrite($table_content, implode(',', $list_content));
 
 extract($safe_post);
 
+
+// ERROR HANDLING EXAMPLE:
+
 // if( $name && $email && $phone && strlen($name)>=2 && strlen($phone)>7){
 
-  // echo '{"valid": true, "message": "תודה שנרשמת ומקווים שתהנה באירוע"}';
+  // echo '{"valid": true, "message": "Thank you for subscribe"}';
 
   fwrite($file, $html_content_header.$html_content);
 
@@ -77,7 +80,7 @@ extract($safe_post);
   // }
 
   // else{
-  // echo '{"valid":false, "message":"יש טעויות בטופס"}'; 
+  // echo '{"valid":false, "message":"Is there error"}'; 
   // }
 }
 }

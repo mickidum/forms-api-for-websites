@@ -20,7 +20,7 @@ Consider your site is 'http://your-domain-name.com' and 'forms-api' folder has b
 
 In wordpress admin Contact form tab insert this tags:
 
-[hidden form_name_id "my_site_contacts_big_form"]
+[hidden form_name_id "my_site_contacts_big_form"] \
 [hidden event_name "My very big form on contacts page"]
 
 Add javascript hook:

@@ -10,9 +10,9 @@ path to login: 'http://your-domain-name.com/forms-api'
 username: 'admin'
 password: 'admin'
 
-For changing username and password use 'Hash helper' - 'http://your-domain-name.com/forms-api/hashme.php'
-Insert username and password and grab this string;
-Open 'forms-api/index.php' and replace default admin string with generated;
+For changing username and password use 'Hash helper' - 'http://your-domain-name.com/forms-api/hashme.php'.
+Insert username and password and grab this string.
+Open 'forms-api/index.php' and replace default admin string with generated.
 
 ## Contact Form 7 Example: 
 

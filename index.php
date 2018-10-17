@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if($_SESSION['logged']){ 
+if(@$_SESSION['logged']){ 
     header("Location: api/list.php"); 
     exit; 
 } 
@@ -8,6 +8,7 @@ if($_SESSION['logged']){
 // username = 'admin'
 // password = 'admin'
 $users = array(
+	// CHANGE THIS
 	"admin"=>"8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
 );
 

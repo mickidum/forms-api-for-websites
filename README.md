@@ -23,13 +23,13 @@ In wordpress admin Contact form tab insert this tags:
 [hidden form_name_id "my_site_contacts_big_form"] \
 [hidden event_name "My very big form on contacts page"]
 
-### Add javascript hook:
+### Add javascript hook to your 'js' file (wordpress):
 
 <pre>
 var host = location.origin;
-$('.wpcf7').on('wpcf7mailsent', function(event) {
+jQuery('.wpcf7').on('wpcf7mailsent', function(event) {
 	var inputs = event.detail.inputs;
-	$.post(host + '/forms-api/api/api.php', inputs, function(data) {});
+	jQuery.post(host + '/forms-api/api/api.php', inputs, function(data) {});
 });
 </pre>
 

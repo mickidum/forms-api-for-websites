@@ -6,7 +6,7 @@ two fields must be sent POST to '/forms-api/api/api.php':
 
 ## Login
 
-path to login: 'http://your-domain-name.com/forms-api':\
+path to login: 'http://your-domain-name.com/forms-api': \
 username: 'admin'\
 password: 'admin'
 

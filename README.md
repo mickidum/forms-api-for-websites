@@ -10,8 +10,8 @@ path to login: 'http://your-domain-name.com/forms-api'
 username: 'admin'
 password: 'admin'
 
-For changing username and password use 'Hash helper' - 'http://your-domain-name.com/forms-api/hashme.php'.
-Insert username and password and grab this string.
+For changing username and password use 'Hash helper' - 'http://your-domain-name.com/forms-api/hashme.php'.\
+Insert username and password and grab this string.\
 Open 'forms-api/index.php' and replace default admin string with generated.
 
 ## Contact Form 7 Example: 
@@ -23,7 +23,7 @@ In wordpress admin Contact form tab insert this tags:
 [hidden form_name_id "my_site_contacts_big_form"] \
 [hidden event_name "My very big form on contacts page"]
 
-Add javascript hook:
+### Add javascript hook:
 
 <pre>
 var host = location.origin;

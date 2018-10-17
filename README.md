@@ -6,8 +6,8 @@ two fields must be sent POST to '/forms-api/api/api.php':
 
 ## Login
 
-path to login: 'http://your-domain-name.com/forms-api'
-username: 'admin'
+path to login: 'http://your-domain-name.com/forms-api':\
+username: 'admin'\
 password: 'admin'
 
 For changing username and password use 'Hash helper' - 'http://your-domain-name.com/forms-api/hashme.php'.\

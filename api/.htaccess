@@ -1,0 +1,5 @@
+<FilesMatch "\.(ini|psd|log|sh|csv|html)$">
+Order allow,deny
+Deny from all
+
+</FilesMatch>

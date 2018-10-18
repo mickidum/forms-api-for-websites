@@ -38,9 +38,9 @@ jQuery('.wpcf7').on('wpcf7mailsent', function(event) {
 });
 </pre>
 
-## CORS support and validation
+## CORS and validation
 
-The CORS support is disabled by default. \
+CORS is disabled by default. \
 If you need CORS just open '/forms-api/api/api.php' and uncoment three headers. 
 
 Validation is disabled too. \

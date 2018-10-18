@@ -11,17 +11,17 @@ Two fields must be sent POST to '/forms-api/api/api.php':
 
 ## Login
 
-path to login: 'http://your-domain-name.com/forms-api': \
+path to login: 'your-domain-name.com/forms-api': \
 username: 'admin' \
 password: 'admin'
 
-For changing username and password use 'Hash helper' - 'http://your-domain-name.com/forms-api/hashme.php'. \
+For changing username and password use 'Hash helper' - 'your-domain-name.com/forms-api/hashme.php'. \
 Insert username and password and copy generated string. \
 Open 'forms-api/index.php' and replace default admin string with generated.
 
 ## Contact Form 7 Example: 
 
-Consider your site is 'http://your-domain-name.com' and 'forms-api' folder has been saved in 'public_html' directory, then full path will be 'http://your-domain-name.com/forms-api'.
+Consider your site is 'your-domain-name.com' and 'forms-api' folder is located in 'public_html' directory, then full path will be 'your-domain-name.com/forms-api'.
 
 In wordpress admin Contact form tab insert this tags:
 
@@ -41,7 +41,7 @@ jQuery('.wpcf7').on('wpcf7mailsent', function(event) {
 ## CORS support and validation
 
 The CORS support disabled by default. \
-If you need CORS just open '/forms-api/api/api.php' and uncoment three headers. \
+If you need CORS just open '/forms-api/api/api.php' and uncoment three headers. 
 
 Validation is disabled too. \
 If you need server side validation you probably should handle errors by yourself, example is comented in '/forms-api/api/api.php' file.

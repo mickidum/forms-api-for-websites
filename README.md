@@ -23,7 +23,7 @@ Open 'forms-api/index.php' and replace default admin string with generated.
 
 Consider your site is 'your-domain-name.com' and 'forms-api' folder is located in 'public_html' directory, then full path will be 'your-domain-name.com/forms-api'.
 
-In wordpress admin Contact form tab insert this tags:
+In wordpress admin Contact form tab insert tags:
 
 [hidden form_name_id "my_site_contacts_big_form"] \
 [hidden event_name "My very big form on contacts page"]

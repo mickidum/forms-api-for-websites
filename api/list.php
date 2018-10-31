@@ -29,7 +29,7 @@ $table_titles = fopen('table_content.txt', 'r');
 @fclose($filename);
 $table_titles_list = explode(',', $table_titles_list);
 // SCAN DIRECTORIES WITH FILES
-$htmlfiles = array_diff(scandir('html', 1), array('.', '..')); 
+$htmlfiles = array_diff(scandir('html', 1), array('.', '..', 'index.php')); 
 
 if (@$_POST['pretty_links']) {
   $html_file = $_POST['htmlfile'];

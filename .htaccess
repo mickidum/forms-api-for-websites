@@ -1,3 +1,9 @@
+# Uncomment these three lines to CORSify your server for everyone.
+
+# Header set Access-Control-Allow-Origin "*"
+# Header set Access-Control-Allow-Methods "GET,PUT,POST,DELETE"
+# Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+
 <FilesMatch "\.(css|flv|gif|htm|html|ico|jpe|jpeg|jpg|js|mp3|mp4|png|pdf|swf|txt)$">
 	<IfModule mod_expires.c>
 		ExpiresActive Off

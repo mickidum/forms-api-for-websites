@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
     $('body').on('click', '#exit', function(event) {
         event.preventDefault();
         $.post('list.php', {logout: 1}, function(data) {
-            window.location.href = '/forms-api'
+            window.location.reload();
         });
     });
 
@@ -69,7 +69,7 @@ jQuery(document).ready(function($) {
         var conf = confirm('DELETE TABLE :' + $(this).data("delete") + '?');
         if (conf) {
             $.post('list.php', obj, function(data) {
-                window.location.href = '/forms-api';
+                window.location.reload();
             });
         }
     });

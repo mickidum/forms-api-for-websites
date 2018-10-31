@@ -41,7 +41,7 @@ jQuery('.wpcf7').on('wpcf7mailsent', function(event) {
 ## CORS and validation
 
 CORS is disabled by default. \
-If you need CORS just open '/forms-api/api/api.php' and uncoment three headers. 
+If you need CORS just open '/forms-api/api/api.php' and uncomment three headers. Also in '/forms-api/.htaccess uncomment 3 lines.
 
 Validation is disabled too. \
 If you need server side validation you probably should handle errors by yourself, example is comented in '/forms-api/api/api.php' file.

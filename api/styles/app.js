@@ -9,6 +9,7 @@ jQuery(document).ready(function($) {
     
     $('.htmllinks').on('click', 'a', function(event) {
         event.preventDefault();
+        $('html, body').scrollTop(0);
         $('#popup').show();
         $('.loading').show();
         $('#event_c_name').html($(this).attr('id'));

@@ -18,7 +18,7 @@ header('Pragma: public');
 header('Expires: 0');
 header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
 
-$table_titles = fopen('table_content.txt', 'r');
+@$table_titles = fopen('table_content.txt', 'r');
 @$table_titles_list = fread($table_titles, filesize("table_content.txt"));
 @$filename = fopen('temp_file_name.txt', 'r');
 @$filename_title = fread($filename, filesize('temp_file_name.txt'));
@@ -72,7 +72,7 @@ if (@$_POST['csvlink']) {
 <!-- Logout button -->
 <a href="#" class="exit" id="exit">exit</a>
 
-<?php if(count($htmlfiles)): ?>
+<?php if(count($htmlfiles) > 1): ?>
 
     <?php 
     if (!$list) {

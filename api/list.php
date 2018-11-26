@@ -29,7 +29,7 @@ header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
 @fclose($filename);
 $table_titles_list = explode(',', $table_titles_list);
 // SCAN DIRECTORIES WITH FILES
-$htmlfiles = array_diff(scandir('html', 1), array('.', '..', 'index.php')); 
+$htmlfiles = array_diff(scandir('html', 1), array('.', '..', 'index.html')); 
 
 if (@$_POST['pretty_links']) {
   $html_file = $_POST['htmlfile'];
@@ -76,14 +76,13 @@ if (@$_POST['csvlink']) {
 
     <?php 
     if (!$list) {
-        $filename_title = str_replace('.html', '', $htmlfiles[count($htmlfiles) - 1]);
+        $filename_title = str_replace('.html', '', reset($htmlfiles));
         @$file = fopen('html/'.$filename_title.'.html', 'r');
         @$list = fread($file, filesize('html/'.$filename_title.'.html'));
         @fclose($file);
     }
     ?>
 
-    <?php if(count($htmlfiles) > 1): ?>
     <div class="sidebar">
         <h2><span dir="rtl">הצגת רשימות אחרות מאתר</span></h2>
         <div dir="ltr" class="htmllinks">
@@ -103,7 +102,6 @@ if (@$_POST['csvlink']) {
         margin: 0;
     }
     </style>
-    <?php endif; ?>
 
 
 

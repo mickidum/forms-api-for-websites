@@ -26,19 +26,16 @@ if ($safe_post['form_name_id']) {
 
 $table_content = fopen('table_content.txt', 'w'); 
 $file = fopen('html/form_reg_'.$form_name_id_file_name.'.html', 'a+'); 
-$csv = fopen('csv/form_reg_'.$form_name_id_file_name.'.csv', 'a+');
 
 $event_name = $safe_post['event_name'] ? $safe_post['event_name'] : $form_name_id_file_name;
 
 $text_content = "";
-$csv_content = "";
 $list_content = [];
 array_push($list_content, 'Id');
 
 foreach ($safe_post as $key => $value) {
   if ($key !== "event_name" and $key !== "form_name_id" and $key !== "g-recaptcha-response") {
     $text_content .= "<td>{$value}</td>";
-    $csv_content .= "{$value},";
     array_push($list_content, $key);
   }
 }
@@ -73,10 +70,6 @@ extract($safe_post);
 
   fwrite($file, $html_content_header.$html_content);
 
-  // $outcsv = $csv_content.date("d-m-Y H:i:s")."\r\n";
-  //add BOM to fix UTF-8 in Excel
-  // fwrite($csv, $bom =( chr(0xEF) . chr(0xBB) . chr(0xBF) ));
-  //    fwrite($csv, $outcsv);
   // }
 
   // else{

@@ -38,9 +38,9 @@ if (@$_POST['pretty_links']) {
 }
 if (@$_POST['delete']) {
   $html_file = $_POST['htmlfile'];
-  $csv_file = $_POST['csvfile'];
+  // $csv_file = $_POST['csvfile'];
   unlink($html_file);
-  unlink($csv_file);
+  // unlink($csv_file);
   header("Location: ../index.php"); 
   exit; 
 }
@@ -49,11 +49,11 @@ if (@$_POST['popup']) {
   include $html_file;
   exit;
 }
-if (@$_POST['csvlink']) {
-  $csv_file = $_POST['csvfile'];
-  include $csv_file;
-  exit;
-}
+// if (@$_POST['csvlink']) {
+//   $csv_file = $_POST['csvfile'];
+//   include $csv_file;
+//   exit;
+// }
 ?>
 
 <!doctype html>
@@ -72,7 +72,7 @@ if (@$_POST['csvlink']) {
 <!-- Logout button -->
 <a href="#" class="exit" id="exit">exit</a>
 
-<?php if(count($htmlfiles) > 1): ?>
+<?php if(count($htmlfiles)): ?>
 
     <?php 
     if (!$list) {
@@ -83,6 +83,7 @@ if (@$_POST['csvlink']) {
     }
     ?>
 
+    <?php if(count($htmlfiles) > 1): ?>
     <div class="sidebar">
         <h2><span dir="rtl">הצגת רשימות אחרות מאתר</span></h2>
         <div dir="ltr" class="htmllinks">
@@ -102,6 +103,7 @@ if (@$_POST['csvlink']) {
         margin: 0;
     }
     </style>
+    <?php endif; ?>
 
 
 

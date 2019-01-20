@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
 
 	echo "<h2><pre>\"".$user."\" => \"".$pass."\"</pre></h2>";
 }
-?>
+?> 
 
 <!DOCTYPE html>
 <html lang="en">

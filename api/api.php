@@ -45,7 +45,7 @@ array_push($list_content, 'date');
 // COMPOSE HTML TABLE
 
 if (count(file('html/form_reg_'.$form_name_id_file_name.'.html')) < 1) {
-  $html_content_header = '<div class="event-code-name left"><strong>שם טופס</strong><span class="event-code-name-head1">' .$event_name. '</span></div><table><thead><tr>';
+  $html_content_header = '<div class="event-code-name left"><strong>Formname</strong><span class="event-code-name-head1">' .$event_name. '</span></div><table><thead><tr>';
   foreach ($list_content as $key => $value) {
     $html_content_header .= "<th>".$value."</th>";
   }
@@ -64,14 +64,12 @@ extract($safe_post);
 
 // ERROR HANDLING EXAMPLE:
 
-// if( $name && $email && $phone && strlen($name)>=2 && strlen($phone)>7){
-
+  // if( $name && $email && $phone && strlen($name)>=2 && strlen($phone)>7){
   // echo '{"valid": true, "message": "Thank you for subscribe"}';
-
-  fwrite($file, $html_content_header.$html_content);
-
+  // SEND MAIL - NEED TO BE CONFIGURED - file: mailer.php
+  // include_once 'mailer.php';
+    fwrite($file, $html_content_header.$html_content);
   // }
-
   // else{
   // echo '{"valid":false, "message":"Is there error"}'; 
   // }
@@ -79,6 +77,9 @@ extract($safe_post);
 }
 
 function test_input($data) {
+  if (is_array($data)) {
+    $data = implode(", ", $data);
+  }
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);

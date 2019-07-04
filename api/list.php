@@ -70,7 +70,7 @@ if (@$_POST['popup']) {
 
 <body>
 <!-- Logout button -->
-<a href="#" class="exit" id="exit">exit</a>
+<a href="#" class="exit" id="exit">Logout</a>
 
 <?php if(count($htmlfiles)): ?>
 
@@ -85,7 +85,7 @@ if (@$_POST['popup']) {
 
     <?php if(count($htmlfiles) > 1): ?>
     <div class="sidebar">
-        <h2><span dir="rtl">הצגת רשימות אחרות מאתר</span></h2>
+        <h2><span dir="rtl">View other lists from a website</span></h2>
         <div dir="ltr" class="htmllinks">
             <?php 
                 foreach ($htmlfiles as $link) {
@@ -111,27 +111,27 @@ if (@$_POST['popup']) {
         <span class="name"><?php echo 'Welcome, '.$_SESSION['username']; ?></span>
         <div class="row">
             <div class="large-12 columns">
-                <h1>אתר <a target="_blank" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>"><?php echo $_SERVER['HTTP_HOST']; ?></a> - נרשמים</h1>
+                <h1>Website <a target="_blank" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>"><?php echo $_SERVER['HTTP_HOST']; ?></a> - Subscribers</h1>
             </div>
         </div>
         <br>
         <div class="content">
             <div class="event-code-name">
-              <strong>שם קובץ</strong><span class="event-code-name-head"> <?php echo $filename_title; ?></span>
+              <strong>Filename</strong><span class="event-code-name-head"> <?php echo $filename_title; ?></span>
             </div>
              <?php echo $list ?>
              </tbody>
             </table>
         </div>
         <div class="csv-footer">
-            <a class="popup-csv-link" data-csv="<?php echo $filename_title; ?>" href="#">קובץ CSV להורדה ↓</a>
+            <a class="popup-csv-link" data-csv="<?php echo $filename_title; ?>" href="#">DOWNLOAD CSV ↓</a>
             <a class="delete-link" data-delete="<?php echo $filename_title; ?>" href="#">DELETE</a>
         </div>
     </div>
 
 <?php else: ?>
 
-    <h1>אתר <a target="_blank" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>"><?php echo $_SERVER['HTTP_HOST']; ?></a> - נרשמים: <span style="color: red;">אין נתונים</span></h1>
+    <h1>Website <a target="_blank" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>"><?php echo $_SERVER['HTTP_HOST']; ?></a> - Subscribers: <span style="color: red;">No Data</span></h1>
 
 <?php endif ?>
 
@@ -142,14 +142,14 @@ if (@$_POST['popup']) {
         <button class="left closebtn small button">close</button>
     </div>
     <div class="csv-footer">
-        <a id="popup-csv-link" class="popup-csv-link" href="#">קובץ CSV להורדה ↓</a>
+        <a id="popup-csv-link" class="popup-csv-link" href="#">DOWNLOAD CSV ↓</a>
         <a href="#" id="delete-link" class="delete-link">DELETE</a>
     </div>
     <div class="content">
         <div class="row collapse expanded">
             <div class="large-12 columns">
                 <div class="event-code-name">
-                  <strong>שם קובץ</strong><span id="event_c_name"></span>
+                  <strong>Filename</strong><span id="event_c_name"></span>
                 </div>
                 <span id="res"></span>
                 
